@@ -8,6 +8,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    /* background: linear-gradient(to right, #f200ff55, #0000ff) */
 }
 
 /* Header styling */
@@ -60,8 +61,8 @@ section {
 .home_section {
     position: relative;
     height: 100vh;
-    background:fixed no-repeat center/cover;
-    animation: changebg 15s ease-in-out infinite;
+    background: fixed no-repeat center/cover;
+    animation: changebg 20s ease-in-out infinite;
 }
 
 @keyframes changebg {
@@ -74,7 +75,7 @@ section {
     }
 
     66% {
-        background-image: url("https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&q=80&w=1170");
+        background-image: url("https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170");
     }
 
     100% {
@@ -124,16 +125,72 @@ section {
     cursor: pointer;
 } */
 
-.Services_section {
-    height: 100vh;
-}
-
 section h2 {
     color: #fffefe;
     margin-bottom: 10px;
 }
 
-.Services_section h1 {
+.Services_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.Services_section .container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 50vh;
+    /* background-color: #ff9800; */
+}
+
+.container .head {
+    width: 100%;
     text-align: center;
-    font-size: clamp(3em, 2vh, 2rem);
+    font-size: clamp(1.5em, 1vw, 3rem);
+}
+
+.container .card {
+    margin: 50px 0;
+    position: relative;
+    border-radius: 15px;
+    width: 20%;
+    height: 350px;
+    box-shadow: 0px 10px 10px 10px rgb(164, 159, 159, 0.2);
+}
+
+.card .logo1 {
+    position: absolute;
+    border-radius: 50%;
+    right: 30%;
+    top: -40px;
+    width: 100px;
+    height: 100px;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvQ_A1YpPDcscDaiVTYKnCVn2foc3piDKWXg&s") no-repeat center/cover;
+}
+
+.card .logo2 {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    right: 30%;
+    top: -40px;
+    width: 100px;
+    height: 100px;
+    background: url("https://portfolio-pi-liard-52.vercel.app/assets/ux-ui-00-2x.png") no-repeat center/cover;
+}
+
+.card .logo3 {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    right: 30%;
+    top: -40px;
+    width: 100px;
+    height: 100px;
+    background: url("https://portfolio-pi-liard-52.vercel.app/assets/creative-thinking.png") no-repeat center/cover;
 }
