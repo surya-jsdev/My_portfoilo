@@ -12,14 +12,14 @@ body {
 
 /* Header styling */
 header {
-    /* background-color: #0c7497a1; */
+    background-color: #0c74977a;
     width: 100%;
     color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 20px 40px;
-    position: absolute;
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
@@ -50,10 +50,7 @@ header {
 
 main {
     position: relative;
-    /* padding: 40px 20px; */
-    background-color: #2b10c268;
     min-height: 80vh;
-    /* Makes sure it takes enough space */
 }
 
 section {
@@ -63,34 +60,80 @@ section {
 .home_section {
     position: relative;
     height: 100vh;
-    background: url("https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1172 ") no-repeat center/cover;
+    background:fixed no-repeat center/cover;
+    animation: changebg 15s ease-in-out infinite;
+}
+
+@keyframes changebg {
+    0% {
+        background-image: url("https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&q=80&w=1172");
+    }
+
+    33% {
+        background-image: url("https://images.unsplash.com/photo-1629904853716-f0bc54eea481?auto=format&fit=crop&q=80&w=1170");
+    }
+
+    66% {
+        background-image: url("https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&q=80&w=1170");
+    }
+
+    100% {
+        background-image: url("https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&q=80&w=1172");
+    }
 }
 
 .home_section::before {
     content: "";
     position: absolute;
-    background: #40404315;
+    background: #0404048b;
     width: 100%;
     height: 100vh;
 }
 
 .home_section div {
     position: absolute;
+    text-align: center;
     top: 50%;
-    left: 10%;
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(2.5rem, 3vw, 2.5rem);
+
 }
 
 .home_section p {
     color: white;
 }
 
-.about_section {
+.home_section .highlight {
+    color: #ff9800;
+    transform: translateX(0);
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes myAnimation {
+    0% {
+        transform: scaleX(200px);
+    }
+}
+
+/* .highlight:hover {
+    transform: scale(0.1);
+    color: aqua;
+    cursor: pointer;
+} */
+
+.Services_section {
     height: 100vh;
-    background: repeating-linear-gradient(rgba(182, 2, 2, 0.546));
 }
 
 section h2 {
     color: #fffefe;
     margin-bottom: 10px;
+}
+
+.Services_section h1 {
+    text-align: center;
+    font-size: clamp(3em, 2vh, 2rem);
 }
