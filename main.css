@@ -105,20 +105,15 @@ section {
     color: white;
 }
 
-.home_section .highlight {
+.homecontent .highlight {
     color: #ff9800;
-    transform: translateX(0);
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
 }
 
-@keyframes myAnimation {
-    0% {
-        transform: scaleX(200px);
-    }
+.homecontent .highlight:hover {
+    cursor: pointer;
+    transform: translateY(-20px);
 }
-
 /* .highlight:hover {
     transform: scale(0.1);
     color: aqua;
@@ -143,9 +138,9 @@ section h2 {
     justify-content: space-around;
     gap: 20px;
     flex-wrap: wrap;
-    width: 80%;
-    height: 50vh;
-    /* background-color: #ff9800; */
+    width: 70%;
+    height: auto;
+
 }
 
 .container .head {
@@ -155,12 +150,38 @@ section h2 {
 }
 
 .container .card {
+    display: flex;
+    justify-content: center;
     margin: 50px 0;
     position: relative;
     border-radius: 15px;
-    width: 20%;
+    width: 25%;
     height: 350px;
     box-shadow: 0px 10px 10px 10px rgb(164, 159, 159, 0.2);
+    transition: 0.5s all;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: translateY(-20px);
+    box-shadow:  0px 10px 20px 10px rgba(40, 27, 185, 0.3);
+}
+
+.card .content h2 {
+    margin: 80px 0 0 5px;
+    font-size: 1.3em;
+    text-align: center;
+    padding: 10px;
+    color: rgba(4, 4, 4, 0.817);
+}
+
+.card .content p {
+    margin: 10px 0 0 5px;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 25px;
+    padding: 10px;
+    color: rgba(64, 64, 64, 0.763);
 }
 
 .card .logo1 {
