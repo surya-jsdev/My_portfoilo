@@ -93,18 +93,20 @@ section {
 }
 
 .home_section .homecontent {
+    width: 100%;
     color: white;
     position: absolute;
     text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: clamp(2.5rem, 3vw, 2.5rem);
+    font-size: clamp(1rem, 3vw, 2.5rem);
 
 }
 
 .home_section p {
     color: white;
+    margin: 0 0 20px 0;
 }
 
 .homecontent a {
@@ -134,7 +136,7 @@ section {
     transform: translateY(-20px);
 }
 
-section h2 {
+section>h2 {
     color: #fffefe;
     margin-bottom: 10px;
 }
@@ -177,7 +179,7 @@ section h2 {
 }
 
 .card:hover {
-    background-color: rgba(50, 100, 116, 0.78);
+    background-color: rgba(50, 100, 116, 0.8);
     cursor: pointer;
     box-shadow: 0px 10px 20px 10px #47849851;
     transform: rotateY(-20deg)
@@ -208,7 +210,7 @@ section h2 {
 .card .logo1 {
     position: absolute;
     border-radius: 50%;
-    right: 30%;
+    right: 31%;
     top: -40px;
     width: 100px;
     height: 100px;
@@ -219,7 +221,7 @@ section h2 {
     position: absolute;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.32);
-    right: 30%;
+    right: 31%;
     top: -40px;
     width: 100px;
     height: 100px;
@@ -230,7 +232,7 @@ section h2 {
     position: absolute;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.32);
-    right: 30%;
+    right: 31%;
     top: -40px;
     width: 100px;
     height: 100px;
@@ -250,24 +252,25 @@ section h2 {
 }
 
 .skill_section .skillhead {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 50px;
-    /* background-color: aquamarine; */
-    margin: 70px 0;
+    text-align: center;
+    margin: 80px 0;
     font-size: 2em;
 }
 
 .skillhead h2 {
-
     color: black;
+    margin: 0;
 }
 
 .skill_container {
     display: flex;
     justify-content: center;
     width: 70%;
-    height: 500px;
+    height: 60%;
 }
 
 .html {
@@ -275,7 +278,7 @@ section h2 {
     justify-content: center;
     width: 75%;
     height: auto;
-    /* background-color: #356576; */
+
 }
 
 .skill_container .html ul {
@@ -300,11 +303,13 @@ section h2 {
     display: flex;
     flex-wrap: wrap;
 }
-.list li img{
+
+.list li img {
     width: 50px;
     height: 50px;
     object-fit: contain;
 }
+
 .list .progress {
     position: relative;
     margin: 5px 0 0 5px;
@@ -314,30 +319,68 @@ section h2 {
     background-color: #48494930;
 }
 
-.progressbar{
-    position: absolute;
+.progressbar {
     width: 80%;
-    background-color: #8bbccd;
-    height: 7px;
-    animation: progressbar 2s ease-in-out forwards;
-}
-
-@keyframes progressbar {
-    from {
-        width: 0%;
-    }
-
-    to {
-        width: 80%;
-        /* or any % to represent skill level */
-    }
-}
-
-/* .progress::before {
     position: absolute;
-    content: "";
-    width: 82%;
-    height: 7px;
     border-radius: 10px;
-    background-color: #014cceab;
-} */
+    background-color: #1b9cc7;
+    height: 7px;
+    transition: width 2s ease-in-out;
+}
+
+/* aboutme */
+.aboutme {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.aboutcontainer {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.aboutme .abouthead {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 60px 0;
+    font-size: 1.5em;
+}
+
+.aboutcontent {
+    display: flex;
+    justify-content: center;
+}
+
+.aboutcontent .profileimg {
+    margin: 20px 10px 0 0;
+    box-shadow: 0 0 20px 10px rgb(156, 157, 158);
+    transition: 0.3s all;
+    transform: skewX(15deg)
+}
+
+.profileimg:hover {
+    box-shadow: 0px 10px 20px 10px #47849851;
+    transform: scale3d(1, 1, 1);
+}
+
+.aboutcontent .para {
+    width: 50%;
+    /* background-color: #1b9cc7; */
+}
+
+.para p {
+    font-family:
+    'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3em;
+    padding: 5px;
+    line-height: 30px;
+    margin: 0 0 0 50px;
+}
